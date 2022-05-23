@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
@@ -11,9 +11,10 @@ const Register = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
+    const [updateProfile, updating, uerror] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
-    
+
     useEffect(() => {
         if (user || guser) {
             navigate('/home', { replace: true })
@@ -22,19 +23,21 @@ const Register = () => {
 
     let errorMessage;
 
-    if(gloading || loading){
+    if (gloading || loading || updating) {
         return <Sppiner></Sppiner>
     };
-    if(gerror||error){
-        errorMessage = gerror?.message || error?.message;
-    }
-   
-    if(user || guser){
-        navigate('/home', { replace: true })
-    }    
+    
+    if (gerror || error || uerror) {
+        errorMessage = gerror?.message || error?.message || uerror.message;
+    };
 
-    const onSubmit = data =>{
-        createUserWithEmailAndPassword(data.email, data.password)
+    if (user || guser) {
+        navigate('/home', { replace: true })
+    };
+
+    const onSubmit = async (data) => {
+        await createUserWithEmailAndPassword(data.email, data.password);
+        await updateProfile({displayName: data.name})
     };
 
     return (
@@ -116,7 +119,7 @@ const Register = () => {
 
 
                         <div className="divider">OR</div>
-                        <button onClick={()=>signInWithGoogle()} className="btn max-w-md btn-active btn-ghost"> <img src={google} alt="" /> SignIn With Google</button>
+                        <button onClick={() => signInWithGoogle()} className="btn max-w-md btn-active btn-ghost"> <img src={google} alt="" /> SignIn With Google</button>
                     </div>
                 </div>
             </div>
