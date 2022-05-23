@@ -1,12 +1,21 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Error from './Pages/Error/Error';
+import Home from './Pages/Home/Home';
+import Navbar from './Pages/Shared/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <h2>This is app js</h2>
-      <button class="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900">Button</button>
-      </div>
+    <div>
+      <Navbar/>
+
+    <Routes>
+      <Route path='/' element={<Home/>}></Route>
+
+      <Route path='/*' element={<Error/>}></Route>
+    </Routes>
+
+    </div>
   );
 }
 
