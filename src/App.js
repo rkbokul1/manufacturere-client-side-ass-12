@@ -1,10 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Blog from './Pages/BLog/Blog';
 import RequireAuth from './Pages/components/RequireAuth';
 import Error from './Pages/Error/Error';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register';
+import Portfolio from './Pages/Portfolio/Portfolio';
 import Purchase from './Pages/Purchase/Purchase';
 import Navbar from './Pages/Shared/Navbar';
 
@@ -23,8 +25,11 @@ function App() {
           </RequireAuth>
         }></Route>
 
+        <Route path='blog' element={<Blog />}></Route>
+        <Route path='portfolio' element={<Portfolio />}></Route>
         <Route path='login' element={<Login />}></Route>
         <Route path='register' element={<Register />}></Route>
+        
 
         <Route path='/*' element={<Error />}></Route>
       </Routes>

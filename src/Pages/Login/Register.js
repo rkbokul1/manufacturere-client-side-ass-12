@@ -3,7 +3,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfil
 
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
-import google from '../../assets/google (1).png';
+import google from '../../assests/google (1).png';
 import auth from '../../firebase.ini';
 import Sppiner from '../components/Sppiner';
 

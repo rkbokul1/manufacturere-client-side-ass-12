@@ -1,13 +1,40 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.ini';
 
 const Navbar = () => {
+    const [user] = useAuthState(auth);
+
+    const handleSignOut = () => {
+        signOut(auth);
+
+    }
+
     const menu = <>
         <li><Link to='home'>Home</Link></li>
         <li><Link to='purchase'>Purchase</Link></li>
-        <li><Link to='about'>About</Link></li>
-        <li><Link to='contact'>Contact</Link></li>
-        <li><Link to='login'>Login</Link></li>
+        <li><Link to='blog'>BLog</Link></li>
+        <li><Link to='/portfolio'>Portfolio</Link></li>
+        {
+            user ?
+                <>
+                    <div class="dropdown">
+                        <label tabIndex="0"><button class="btn btn-md btn-ghost">Dashboard</button></label>
+                        <ul tabIndex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><Link to='/'>My Profile</Link></li>
+                            <li><Link to='/'>My Orders</Link></li>
+                            <li><Link to='/'>Add a Review</Link></li>
+                            <li><button onClick={handleSignOut} >Sign out</button></li>
+                        </ul>
+                    </div>
+                    {/* <li><button onClick={handleSignOut} >Sign out</button></li> */}
+
+                </>
+                :
+                <li><Link to='login'>Login</Link></li>
+        }
     </>
 
 
@@ -22,7 +49,7 @@ const Navbar = () => {
                         {menu}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <Link to='/' className="btn btn-ghost normal-case text-xl">daisyUI</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

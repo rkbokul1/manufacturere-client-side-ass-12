@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
-import google from '../../assets/google (1).png';
+import { Link,  useNavigate } from 'react-router-dom';
+import google from '../../assests/google (1).png';
 import auth from '../../firebase.ini';
 import Sppiner from '../components/Sppiner';
 
@@ -16,7 +16,7 @@ const Login = () => {
 
     useEffect(() => {
         if (user || guser) {
-            navigate('/home', { replace: true })
+            navigate('/home', { replace: true });
         }
     }, [user, guser]);
 
@@ -29,7 +29,7 @@ const Login = () => {
     if (gerror || error) {
         errorMessage = gerror?.message || error?.message;
     };
-    
+
 
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password)
