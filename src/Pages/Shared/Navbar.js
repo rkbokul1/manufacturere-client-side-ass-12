@@ -20,9 +20,9 @@ const Navbar = () => {
         {
             user ?
                 <>
-                    <div class="dropdown">
-                        <label tabIndex="0"><button class="btn btn-md btn-ghost">Dashboard</button></label>
-                        <ul tabIndex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <div className="dropdown">
+                        <label tabIndex="0"><button className="btn btn-md btn-ghost">Dashboard</button></label>
+                        <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                             <li><Link to='/'>My Profile</Link></li>
                             <li><Link to='/'>My Orders</Link></li>
                             <li><Link to='/'>Add a Review</Link></li>

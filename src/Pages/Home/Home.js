@@ -1,6 +1,8 @@
 import React from 'react';
 import Footer from '../Shared/Footer';
 import Banner from './Banner';
+import Enroll from './Enroll';
+import Reviews from './Reviews';
 import Tools from './Tools';
 
 const Home = () => {
@@ -8,6 +10,8 @@ const Home = () => {
         <div>
             <Banner/>
             <Tools/>
+            <Reviews/>
+            <Enroll/>
             <Footer/>            
         </div>
     );

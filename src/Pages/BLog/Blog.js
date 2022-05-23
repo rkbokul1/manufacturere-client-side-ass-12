@@ -6,11 +6,11 @@ const Blog = () => {
 
             <h1 className='my-5 text-2xl font-bold text-primary-focus text-center'>Frequently Asked Question</h1>
             {/* 1 */}
-            <div tabindex="0" class="collapse my-2 lg:max-w-lg collapse-plus border border-base-300 bg-base-100 rounded-box">
-                <div class="collapse-title text-xl font-medium">
+            <div tabIndex="0" className="collapse my-2 lg:max-w-lg collapse-plus border border-base-300 bg-base-100 rounded-box">
+                <div className="collapse-title text-xl font-medium">
                     <h1>How will you improve the performance of a React Application?</h1>
                 </div>
-                <div class="collapse-content">
+                <div className="collapse-content">
                     <p>Optimizing application performance is key for developers who are mindful of keeping a user’s experience positive to keep them on an app and engaged.
                         Five importans things to Optiomizing best applications performance-
                     </p>
@@ -24,11 +24,11 @@ const Blog = () => {
                 </div>
             </div>
             {/* 2 */}
-            <div tabindex="0" class="collapse my-2 lg:max-w-lg collapse-plus border border-base-300 bg-base-100 rounded-box">
-                <div class="collapse-title text-xl font-medium">
+            <div tabIndex="0" className="collapse my-2 lg:max-w-lg collapse-plus border border-base-300 bg-base-100 rounded-box">
+                <div className="collapse-title text-xl font-medium">
                     <h1>What are the different ways to manage a state in a React application?</h1>
                 </div>
-                <div class="collapse-content">
+                <div className="collapse-content">
                     <p>There are four main types of state you need to properly manage in your React apps:</p>
 
                     <p><small>
@@ -40,11 +40,11 @@ const Blog = () => {
                 </div>
             </div>
             {/* 3 */}
-            <div tabindex="0" class="collapse my-2 lg:max-w-lg collapse-plus border border-base-300 bg-base-100 rounded-box">
-                <div class="collapse-title text-xl font-medium">
+            <div tabIndex="0" className="collapse my-2 lg:max-w-lg collapse-plus border border-base-300 bg-base-100 rounded-box">
+                <div className="collapse-title text-xl font-medium">
                     <h1>Why you do not set the state directly in React?</h1>
                 </div>
-                <div class="collapse-content">
+                <div className="collapse-content">
                     <p>One should never update the state directly because of the following reasons:-
                     </p>
                     <p><small>
@@ -55,11 +55,11 @@ const Blog = () => {
                 </div>
             </div>
             {/* 4 */}
-            <div tabindex="0" class="collapse my-2 lg:max-w-lg collapse-plus border border-base-300 bg-base-100 rounded-box">
-                <div class="collapse-title text-xl font-medium">
+            <div tabIndex="0" className="collapse my-2 lg:max-w-lg collapse-plus border border-base-300 bg-base-100 rounded-box">
+                <div className="collapse-title text-xl font-medium">
                     <h1>What is a unit test? Why should write unit tests?</h1>
                 </div>
-                <div class="collapse-content">
+                <div className="collapse-content">
                     <p>Optimizing application performance is key for developers who are mindful of keeping a user’s experience positive to keep them on an app and engaged.
                         Five importans things to Optiomizing best applications performance-
                     </p>
@@ -73,11 +73,11 @@ const Blog = () => {
                 </div>
             </div>
             {/* 5 */}
-            <div tabindex="0" class="collapse my-2 lg:max-w-lg collapse-plus border border-base-300 bg-base-100 rounded-box">
-                <div class="collapse-title text-xl font-medium">
+            <div tabIndex="0" className="collapse my-2 lg:max-w-lg collapse-plus border border-base-300 bg-base-100 rounded-box">
+                <div className="collapse-title text-xl font-medium">
                     <h1>How does prototypical inheritance work?</h1>
                 </div>
-                <div class="collapse-content">
+                <div className="collapse-content">
                     <p>Optimizing application performance is key for developers who are mindful of keeping a user’s experience positive to keep them on an app and engaged.
                         Five importans things to Optiomizing best applications performance-
                     </p>
