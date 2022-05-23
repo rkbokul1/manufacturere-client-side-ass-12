@@ -18,10 +18,31 @@ const Register = () => {
 
                             <div class="form-control w-full max-w-xs">
                                 <label class="label">
+                                    <span class="label-text text-center">Name</span>
+                                </label>
+                                <input class="input input-bordered w-full max-w-xs"
+                                    type="text"
+                                    placeholder="name"
+                                    {...register("name", {
+                                        required: true,
+                                        minLength: {
+                                            value: 6,
+                                            message: 'must be contain 6 Character'
+                                        }
+                                    })}
+                                />
+                                {errors.name?.type === 'required' && <span className='text-red-500' >Name is required</span>}
+                                {errors.name?.type === 'minLength' && <span className='text-red-500'>{errors.name.message}</span>}
+                            </div>
+
+                            {/* email */}
+
+                            <div class="form-control w-full max-w-xs">
+                                <label class="label">
                                     <span class="label-text text-center">Email</span>
                                 </label>
                                 <input class="input input-bordered w-full max-w-xs"
-                                    type="email"
+                                    type="text"
                                     placeholder="email"
                                     {...register("email", {
                                         required: true,
