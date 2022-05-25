@@ -14,8 +14,8 @@ const Purchase = () => {
 
 
     return (
-        <div className='pt-8 grid justify-center'>
-            <h1 className='text-3xl text-center font-bold my-3'>Purchase Page</h1>
+        <div className='pt-5 grid justify-center'>
+            <h1 className='text-3xl text-center font-bold my-1'>Purchase Page</h1>
             <h2 className="text-2xl text-center font-bold">Product Name: {singleTool.Name}</h2>
             <h2 className="text-xl text-center font-bold">Price: {singleTool.Price}</h2>
 

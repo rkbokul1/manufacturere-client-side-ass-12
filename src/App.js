@@ -13,6 +13,8 @@ import Register from './Pages/Login/Register';
 import Portfolio from './Pages/Portfolio/Portfolio';
 import Purchase from './Pages/Purchase/Purchase';
 import Navbar from './Pages/Shared/Navbar';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -28,7 +30,7 @@ function App() {
             <Purchase />
           </RequireAuth>
         }></Route>
-        
+
         <Route path='purchase/:paramsId' element={
           <RequireAuth>
             <Purchase />
@@ -41,14 +43,15 @@ function App() {
         <Route path='register' element={<Register />}></Route>
 
         <Route path='dashboard' htmlFor='my-drawer' element={<Dashboard />}>
-          <Route index element={<Order/>}></Route>
-          <Route path='myreview' element={<MyReview/>}></Route>
-          <Route path='myprofile' element={<MyProfiles/>}></Route>
+          <Route index element={<RequireAuth><Order /></RequireAuth>}></Route>
+          <Route path='myreview' element={<RequireAuth><MyReview /></RequireAuth>}></Route>
+          <Route path='myprofile' element={<RequireAuth><MyProfiles /></RequireAuth>}></Route>
         </Route>
-        
+
 
         <Route path='/*' element={<Error />}></Route>
       </Routes>
+      <ToastContainer />
 
     </div>
   );
