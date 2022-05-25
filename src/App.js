@@ -1,6 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Dashboard from './Dashboard/Dashboard';
+import MyProfiles from './Dashboard/MyProfiles';
+import MyReview from './Dashboard/MyReview';
+import Order from './Dashboard/Order';
 import Blog from './Pages/BLog/Blog';
 import RequireAuth from './Pages/components/RequireAuth';
 import Error from './Pages/Error/Error';
@@ -32,7 +35,9 @@ function App() {
         <Route path='register' element={<Register />}></Route>
 
         <Route path='dashboard' for='my-drawer' element={<Dashboard />}>
-          <Route></Route>
+          <Route index element={<Order/>}></Route>
+          <Route path='myreview' element={<MyReview/>}></Route>
+          <Route path='myprofile' element={<MyProfiles/>}></Route>
         </Route>
         
 
