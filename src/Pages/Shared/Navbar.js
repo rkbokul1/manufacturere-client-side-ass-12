@@ -18,19 +18,12 @@ const Navbar = () => {
         <li><Link to='blog'>BLog</Link></li>
         <li><Link to='/portfolio'>Portfolio</Link></li>
         {
+            user && <li ><Link to='/dashboard'>Dashboard</Link></li>
+        }
+        {
             user ?
-                <>
-                    <div className="dropdown">
-                        <label tabIndex="0"><button className="btn btn-md btn-ghost">Dashboard</button></label>
-                        <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><Link to='/'>My Profile</Link></li>
-                            <li><Link to='/'>My Orders</Link></li>
-                            <li><Link to='/'>Add a Review</Link></li>
-                            <li><button onClick={handleSignOut} >Sign out</button></li>
-                        </ul>
-                    </div>
-                    {/* <li><button onClick={handleSignOut} >Sign out</button></li> */}
-
+                <>                    
+                    <li><button onClick={handleSignOut} >Sign out</button></li>
                 </>
                 :
                 <li><Link to='login'>Login</Link></li>

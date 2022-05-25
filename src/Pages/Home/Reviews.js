@@ -2,11 +2,11 @@ import React from 'react';
 
 const Reviews = () => {
     return (
-        <div>
-            <h1 className='text-2xl font-bold text-center'>Our Customer Reviews</h1>
-            <div className='py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+        <div className='mt-10'>
+            <h1 className='text-3xl font-bold text-center text-primary'>Our Customer Reviews</h1>
+            <div className='py-10 grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {/* 1 */}
-                <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card max-w-sm bg-base-100 shadow-xl">
                     <div className="card-body">
                         <div className='flex'>
                             <div className="avatar">
@@ -23,13 +23,13 @@ const Reviews = () => {
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked />
                         </div>
                     </div>
                 </div>
 
                 {/* 2 */}
-                <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card max-w-sm bg-base-100 shadow-xl">
                     <div className="card-body">
                         <div className='flex'>
                             <div className="avatar">
@@ -45,14 +45,14 @@ const Reviews = () => {
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked/>
                         </div>
                     </div>
                 </div>
 
                 {/* 3 */}
-                <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card max-w-sm bg-base-100 shadow-xl">
                     <div className="card-body">
                         <div className='flex'>
                             <div className="avatar">
@@ -69,7 +69,7 @@ const Reviews = () => {
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked />
                         </div>
                     </div>
                 </div>

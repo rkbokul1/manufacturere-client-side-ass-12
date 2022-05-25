@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Dashboard from './Dashboard/Dashboard';
 import Blog from './Pages/BLog/Blog';
 import RequireAuth from './Pages/components/RequireAuth';
 import Error from './Pages/Error/Error';
@@ -29,6 +30,10 @@ function App() {
         <Route path='portfolio' element={<Portfolio />}></Route>
         <Route path='login' element={<Login />}></Route>
         <Route path='register' element={<Register />}></Route>
+
+        <Route path='dashboard' for='my-drawer' element={<Dashboard />}>
+          <Route></Route>
+        </Route>
         
 
         <Route path='/*' element={<Error />}></Route>

@@ -4,7 +4,7 @@ const Enroll = () => {
     return (
         <div>
             <div tabIndex="0" className="collapse">
-                <div class="collapse-title text-xl font-medium bg-slate-900 mb-8">
+                <div className="collapse-title text-xl font-medium bg-slate-900 mb-8">
                     <h1 className='text-2xl font-bold text-white text-center'>Learn More About Us</h1>
                 </div>
                 <div className="collapse-content">

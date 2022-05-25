@@ -84,7 +84,7 @@ website- https://anpsthemes.com/industrial/demo-7/
 
 9. Use `react query` for at least one API call. 
 
-10. Use `react hook form` at least one form. For the rest of the forms, you can either use react hook form or basic html form or any other form you want.
+<!-- 10. Use `react hook form` at least one form. For the rest of the forms, you can either use react hook form or basic html form or any other form you want. -->
 
 ### Optional but highly encouraged to do:
 Make sure you have done everything on the main part and bonus. Deploy and test everything. After that, you may try optional things.

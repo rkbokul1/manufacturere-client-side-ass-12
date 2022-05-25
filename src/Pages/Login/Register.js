@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import google from '../../assests/google (1).png';
 import auth from '../../firebase.ini';
 import Sppiner from '../components/Sppiner';
@@ -14,10 +14,12 @@ const Register = () => {
     const [updateProfile, updating, uerror] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     useEffect(() => {
         if (user || guser) {
-            navigate('/home', { replace: true })
+            navigate(from)
         }
     }, [user, guser]);
 
