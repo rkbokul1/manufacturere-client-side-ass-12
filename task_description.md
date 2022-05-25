@@ -64,13 +64,13 @@ website- https://anpsthemes.com/industrial/demo-7/
 ### Bonus: 
 1. Meaningful `readme.md` file on both the client and server sides containing your website name, a link to your live site. Add at least five bullet points that mention your website's different features and functionality.
 
-2. At least 15 meaningful GitHub commits for the client-side and at least 10 meaningful commits for the server-side repository.
+<!-- 2. At least 15 meaningful GitHub commits for the client-side and at least 10 meaningful commits for the server-side repository. -->
 
-3. Make the website responsive. Make sure the site looks different on desktop and mobile responsive. Tablet responsive is optional.
+<!-- 3. Make the website responsive. Make sure the site looks different on desktop and mobile responsive. Tablet responsive is optional. -->
 
-4. Make the website meaningful and consistent in look and feel. Give your website a relevant name. Images and all the content of the website have to be appropriate. No `lorem ipsum` please. 
+<!-- 4. Make the website meaningful and consistent in look and feel. Give your website a relevant name. Images and all the content of the website have to be appropriate. No `lorem ipsum` please.  -->
 
-5. Clean and organized Code. Organize components and add comments when needed. use `.env` file on the server, `.env.local` file on the client to hide db user and password, etc. Also use the `.gitignore` file
+<!-- 5. Clean and organized Code. Organize components and add comments when needed. use `.env` file on the server, `.env.local` file on the client to hide db user and password, etc. Also use the `.gitignore` file -->
 
 6. On the `Manage All Orders` page for the admin, the logged-in admin will see the orders placed by every user. If multiple users use this website to place orders, everyone's order will be displayed here. The orders that are not paid will show `unpaid`. And the orders that are paid, an Admin can update the status of a paid order. After placing an order and completing the payment, every order will have a default status: `pending`. On the Manage All Orders page, an admin will be able to update the status of the pending to `shipped` status. This could be a simple button to update the pending status. (don't overthink, this is a simple button to update the status field of the order. Use Id to find the order and set the status to approved). Also, the admin will be able to cancel (cancel means admin can delete an order) that is not paid yet. Make sure to add a confirmation before deleting. 
 

@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
     return (
-        <div className="drawer drawer-mobile">
+        <div className="drawer drawer-mobile mt-5">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
                 <h1 className="text-3xl text-center font-bold">Welcome To DashBoard</h1>
