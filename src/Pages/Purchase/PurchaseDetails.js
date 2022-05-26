@@ -19,7 +19,7 @@ const PurchaseDetails = ({ singleTool }) => {
             quantity: event.target.quantity.value
         };
 
-        await fetch('http://localhost:5000/orders', {
+        await fetch('https://enigmatic-lake-18516.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'

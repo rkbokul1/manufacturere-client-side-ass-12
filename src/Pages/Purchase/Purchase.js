@@ -5,7 +5,7 @@ import PurchaseDetails from './PurchaseDetails';
 const Purchase = () => {
     const { paramsId } = useParams();
     const [singleTool, setSingleTool] = useState([]);
-    const urls = `http://localhost:5000/tools/${paramsId}`
+    const urls = `https://enigmatic-lake-18516.herokuapp.com/tools/${paramsId}`
     useEffect(() => {
         fetch(urls)
             .then(res => res.json())

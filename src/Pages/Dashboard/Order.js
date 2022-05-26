@@ -4,7 +4,7 @@ import Showorder from './Showorder';
 const Order = () => {
     const [orders, setOrders] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://enigmatic-lake-18516.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])

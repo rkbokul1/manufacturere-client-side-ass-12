@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const Showorder = ({ orders, order, index, setOrders }) => {
 
     const handleProductDelete = async (id) => {        
-        await fetch(`http://localhost:5000/orders/${id}`, {
+        await fetch(`https://enigmatic-lake-18516.herokuapp.com/orders/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())

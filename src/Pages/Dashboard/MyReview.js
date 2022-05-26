@@ -24,7 +24,7 @@ const MyReview = () => {
             setError(`you can't add more than 5`);
         }
         else {
-            await fetch('http://localhost:5000/review', {
+            await fetch('https://enigmatic-lake-18516.herokuapp.com/review', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
