@@ -1,8 +1,8 @@
 # Getting Started with Create React App
 
-Live site Link [Live Side Link](https://github.com/facebook/create-react-app).
-Live site Link [Client Side Repo](https://github.com/facebook/create-react-app).
-Live site Link [Server-side Repo](https://github.com/facebook/create-react-app).
+Live site Link [Live Side Link](https://manufacturer-website-a12.web.app/).
+Live site Link [Client Side Repo](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-rkbokul1).
+Live site Link [Server-side Repo](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-rkbokul1).
 
 ## credentials
 
